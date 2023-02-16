@@ -1,0 +1,6 @@
+com\qa\gembook\Locators\SideBar_Locators.class
+com\qa\gembook\StepDefinition\OtherPortals.class
+com\qa\gembook\StepDefinition\Hook.class
+com\qa\gembook\Locators\Login_Locators.class
+com\qa\gembook\GembookUtilities\GembookUtils.class
+com\qa\gembook\GembookUtilities\OtherPortalsUtils.class

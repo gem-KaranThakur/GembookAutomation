@@ -3,13 +3,10 @@ package com.qa.gembook.StepDefinition;
 import com.gemini.generic.reporting.GemTestReporter;
 import com.gemini.generic.reporting.STATUS;
 import com.gemini.generic.ui.utils.DriverAction;
-import com.gemini.generic.ui.utils.DriverManager;
 import com.qa.gembook.Locators.SideBar_Locators;
 import com.qa.gembook.GembookUtilities.*;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;

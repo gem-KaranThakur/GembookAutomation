@@ -24,7 +24,7 @@ Feature: Gembook -> OtherPortals
      Then User clicks on the Other Portals menu item
      Then check if sub menu items are gone
 
-   Scenario: Verify the Other Portals icon functionality
+   Scenario: Verify the Other Portals arrow icon functionality
      Given Check if Side bar is present
      Then Verify if Other Portals is present
      When Check if all sub items are present

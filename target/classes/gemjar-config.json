@@ -1,9 +1,9 @@
 {
   "environment": "prod",
-  "projectName": "GEMBOOKAUTOMATION",
+  "projectName": "gembook_automation",
   "reportName": "GembookTestReport",
-  "glueCode": "com.qa.gembook",
-  "feature": "src/resources/features/",
+  "glueCode": "com.qa.gembook.StepDefinition",
+  "feature": "src/main/resources/features",
   "prod": {
     "browserName": "chrome",
     "launchUrl": "https://gembook.geminisolutions.com/#/",
