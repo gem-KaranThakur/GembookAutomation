@@ -31,7 +31,7 @@ Feature: Gembook -> OtherPortals
      Then Verify the position of other Portals icon
      Then User clicks on the Other Portals menu item
      Then Verify the position of other Portals icon
-
+ @Test
   Scenario Outline: Verify the tooltip of Other Portals sub menu items
     Given Check if Side bar is present
     Then Verify if Other Portals is present
