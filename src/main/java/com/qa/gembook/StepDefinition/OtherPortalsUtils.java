@@ -1,4 +1,4 @@
-package com.qa.gembook.GembookUtilities;
+package com.qa.gembook.StepDefinition;
 
 import com.gemini.generic.reporting.GemTestReporter;
 import com.gemini.generic.reporting.STATUS;
@@ -46,8 +46,8 @@ public class OtherPortalsUtils extends DriverAction {
             return false;
         }
     }
-    public static boolean isElementVisible(By locator)
-    {
+
+    public static boolean isElementVisible(By locator) {
         return isExist(locator) && DriverManager.getWebDriver().findElement(locator).isDisplayed();
     }
 
@@ -73,13 +73,17 @@ public class OtherPortalsUtils extends DriverAction {
         hoverOver(SideBar_Locators.navigationTab(subMenuItem));
 //        String tooltip = getAttributeName(getElement(SideBar_Locators.navigationTab(subMenuItem)), "title")
         if (tooltip.equalsIgnoreCase(menuItemToolTip)) {
-            GemTestReporter.addTestStep("Verify tooltip of " + subMenuItem + " sub menu item", "tooltip are same", STATUS.PASS, takeSnapShot());
-        } else
-            GemTestReporter.addTestStep("Verify tooltip of " + subMenuItem + " sub menu item", "Tooltip are different", STATUS.FAIL, takeSnapShot());
+            waitSec(1);
+            GemTestReporter.addTestStep("Verify tooltip of " + subMenuItem + " sub menu item", "Tooltip Expected: " +menuItemToolTip +". Tooltip Observed: "+ tooltip , STATUS.PASS, takeSnapShot());
+        } else {
+            waitSec(1);
+            GemTestReporter.addTestStep("Verify tooltip of " + subMenuItem + " sub menu item", "Tooltip Expected: " + menuItemToolTip + ". Tooltip Observed: " + tooltip, STATUS.FAIL, takeSnapShot());
+        }
+            waitSec(3);
     }
+
     @Then("Verify if user is navigated to other tab")
-    public void verifyUserIsNavigated()
-    {
+    public void verifyUserIsNavigated() {
         String currentHandle = DriverManager.getWebDriver().getWindowHandle();
 
         for (String handle : DriverManager.getWebDriver().getWindowHandles()) {

@@ -1,4 +1,4 @@
-package com.qa.gembook.GembookUtilities;
+package com.qa.gembook.StepDefinition;
 
 import com.gemini.generic.reporting.GemTestReporter;
 import com.gemini.generic.reporting.STATUS;
@@ -47,7 +47,7 @@ public class GembookUtils extends DriverAction {
             typeText(Login_Locators.credentials(credentialType), "User enters the password", "Password Entered Successfully", readProperties(credentialType));
         }
         waitUntilElementAppear(Login_Locators.nextBtn, 10);
-        click(Login_Locators.nextBtn);
+        click(Login_Locators.nextBtn,"Next button");
         waitSec(5);
     }
 

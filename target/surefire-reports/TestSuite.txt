@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 203.572 s <<< FAILURE! - in TestSuite
+com.gemini.generic.bdd.GemJarCucumberBase.runScenario["Gembook_OtherPortals_ArrowIcon", "Gembook -> OtherPortals"](3)  Time elapsed: 9.71 s  <<< FAILURE!
+java.lang.NullPointerException
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	at com.gemini.generic.ui.utils.DriverAction.waitUntilElementAppear(DriverAction.java:1101)
+	at com.qa.gembook.StepDefinition.GembookUtils.enterCredentials(GembookUtils.java:43)
+	at ✽.User enters the "username"(file:///C:/Users/ka.thakur/Desktop/gembook_automation/src/main/resources/features/OtherPortals.feature:5)
+
